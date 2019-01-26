@@ -1,0 +1,61 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+    <h:head>
+        <title>Facelet Title</title>
+    </h:head>
+    <h:body>
+        <h:form>
+            <h:outputLabel value="Id"></h:outputLabel>
+            <br></br>
+            <br></br>
+            <h:inputText value="#{u.id}"></h:inputText>
+                        <br></br>
+                        <br></br>
+
+            <h:outputLabel value="user name "></h:outputLabel>
+                        <br></br>
+                        <br></br>
+
+            <h:inputText value="#{u.user_name}"></h:inputText>
+                        <br></br>
+                        <br></br>
+
+            <h:outputLabel value="password "></h:outputLabel>
+                        <br></br>
+                        <br></br>
+
+            <h:inputText value="#{u.password}"></h:inputText>
+                        <br></br>
+                        <br></br>
+
+            <h:commandButton value="add" action="#{u.addUser}"></h:commandButton>
+                        <br></br>
+                        <br></br>
+
+            <h:commandButton value="update" action="#{u.update}"></h:commandButton>
+                        <br></br>
+                        <br></br>
+
+            <h:commandButton value="delete " action="#{u.delete()}"></h:commandButton>
+            <br></br>
+                        <br></br>
+                        <h:dataTable value="#{u.allUser}" var="user">
+                            <h:column>
+                                #{user.id}
+                            </h:column>
+                            <h:column>
+                                #{user.password}
+                            </h:column>
+                            <h:column>
+                                #{user.user_name}
+                            </h:column>
+                        
+                        </h:dataTable>
+            
+        </h:form>
+    </h:body>
+</html>
+
